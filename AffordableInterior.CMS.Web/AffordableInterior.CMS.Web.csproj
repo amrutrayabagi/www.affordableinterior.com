@@ -158,6 +158,7 @@
     <Compile Include="App_Start\GlassMapperUmbCustom.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MySurfaceController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -403,11 +404,11 @@
   <Target Name="AfterBuild">
     <ItemGroup>
       <Assets Include="medialibrary\**\*.*" />
-       <UIItems Include="Views\*.*" />
+      <UIItems Include="Views\*.*" />
       <UIItems Include="Views\**\*.*" />
       <Assemblies Include="bin\**\AffordableInterior.CMS.Web.dll" />
       <Assemblies Include="bin\**\RoySol*.dll" />
-     <Config Include="web.config" />
+      <Config Include="web.config" />
     </ItemGroup>
     <Microsoft.Build.Tasks.Copy SourceFiles="@(Assets)" DestinationFolder="$(SolutionDir)\Website\medialibrary\%(RecursiveDir)" />
     <Microsoft.Build.Tasks.Copy SourceFiles="@(UIItems)" DestinationFolder="$(SolutionDir)\Website\Views\%(RecursiveDir)" />

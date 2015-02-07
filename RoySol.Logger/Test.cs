@@ -8,5 +8,9 @@ namespace RoySol.Logger
 {
     class Test
     {
+        public void Method()
+        {
+            Console.WriteLine("fasdfadsf");
+        }
     }
 }
